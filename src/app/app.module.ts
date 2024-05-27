@@ -13,6 +13,8 @@ import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { LogoutComponent } from './logout/logout.component';
 import { RouteGuardService } from './service/route-guard.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TodoComponent } from './todo/todo.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { RouteGuardService } from './service/route-guard.service';
     ListTodosComponent,
     MenuComponent,
     FooterComponent,
-    LogoutComponent
+    LogoutComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,8 @@ import { RouteGuardService } from './service/route-guard.service';
     FormsModule,
    AppRoutingModule,
    BrowserModule,
-   NgIf
+   NgIf,
+   HttpClientModule
    
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA],
